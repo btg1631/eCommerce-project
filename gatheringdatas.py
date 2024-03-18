@@ -39,7 +39,7 @@ try:  # 할인가  span.cdtl_new_price.notranslate > em
     element_price = browser.find_element(by=By.CSS_SELECTOR, value="span.cdtl_new_price.notranslate > em")
     price = element_price.text
 except:
-    brand = "None"
+    price = "None"
 # 원가 ( 원래 가격, 행사 미진행시 Nan)
 try:   # 원가  span.cdtl_old_price > em
     element_oldprice = browser.find_element(by=By.CSS_SELECTOR, value="span.cdtl_old_price > em")
@@ -50,6 +50,7 @@ except:
     event = False
 
 # 리뷰 클릭
+
 button = browser.find_element(by=By.CSS_SELECTOR, value="div.cdtl_review_wrap > dl > dd > div > a")
 button.click()
 time.sleep(1)
@@ -58,7 +59,7 @@ time.sleep(1)
 pagination_selector = "#comment_navi_area > div > a"
 # 다음 페이지 버튼 선택자
 next_page_button_selector = ".rvw_btn_next"
-
+flag = False
 while True:
     try:
         for j in range(0, 10): 
@@ -100,12 +101,15 @@ while True:
                 buttons[j].click()
                 time.sleep(1.5)
             except:
-                button = browser.find_element(By.CSS_SELECTOR, value=next_page_button_selector)
-                button.click()
-                time.sleep(1)
-
+                flag = True
+                break
+        else:
+            button = browser.find_element(By.CSS_SELECTOR, value=next_page_button_selector)
+            button.click()
+            time.sleep(1)
+        if flag:
+            break
     except:
         break
-
 # 브라우저 종료
 browser.quit()
