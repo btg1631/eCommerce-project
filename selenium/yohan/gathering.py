@@ -47,13 +47,24 @@ def get_data(database_name,url):
     button.click()
     time.sleep(1)
     # 페이지네이션 전체 선택자
-    pagination_selector = "#comment_navi_area > div > a"
+    # pagination_selector = "#comment_navi_area > div > a"
+
     # 다음 페이지 버튼 선택자
     next_page_button_selector = ".rvw_btn_next"
     flag = False
     while True:
         try:
-            for j in range(0, 9):
+            for j in range(0, 10):
+                try:
+                    if j != 0:
+                        buttons = browser.find_element(By.CSS_SELECTOR, value=f'#comment_navi_area > div > a:nth-child({j+1})')
+                        
+                        buttons.click()
+                        time.sleep(1)
+                except:
+                    flag = True
+                    break
+
                 # 리뷰 전체  #item_rvw_list > li
                 element_bundle_review = browser.find_elements(By.CSS_SELECTOR, value="#item_rvw_list > li")
                 for i in element_bundle_review:
@@ -85,13 +96,7 @@ def get_data(database_name,url):
                     collection.insert_one({"merchTitle": title, "merchPrice": int(price), "merchOld": oldprice, "merchEvent": event, "textName": id, "textDate": date, "textLevel": int(rating), "textContent": comments})
                     # print("merchTitle:{}, merchPrice:{}, merchOld:{}, merchEvent:{}".format(title, price, oldprice, event))
                     # print("textName:{}, textDate:{}, textLevel:{}, textContent:{}".format(id, date, rating, comments))
-                try:
-                    buttons = browser.find_elements(By.CSS_SELECTOR, value=pagination_selector)
-                    buttons[j].click()
-                    time.sleep(1)
-                except:
-                    flag = True
-                    break
+
             else:
                 button = browser.find_element(By.CSS_SELECTOR, value=next_page_button_selector)
                 button.click()
