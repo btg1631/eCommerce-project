@@ -17,7 +17,7 @@ def get_data(database_name,url):
     collection = database[database_name]
     # - 주소 입력
     browser.get(url)
-    time.sleep(2)
+    time.sleep(10)
     # - 정보 획득
     from selenium.webdriver.common.by import By
     # 상품명
@@ -45,7 +45,7 @@ def get_data(database_name,url):
     # 리뷰 클릭
     button = browser.find_element(by=By.CSS_SELECTOR, value="div.cdtl_review_wrap > dl > dd > div > a")
     button.click()
-    time.sleep(1)
+    time.sleep(2)
     # 페이지네이션 전체 선택자
     pagination_selector = "#comment_navi_area > div > a"
 
@@ -100,7 +100,7 @@ def get_data(database_name,url):
             else:
                 button = browser.find_element(By.CSS_SELECTOR, value=next_page_button_selector)
                 button.click()
-                time.sleep(1)
+                time.sleep(2)
             if flag:
                 break
         except:
