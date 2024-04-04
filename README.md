@@ -74,6 +74,7 @@
 
 ![모델 평가](./images/model_result.png)
 
+<img src="./images/train_result.png" alt="train 평가" width="400"/> <img src="./images/validation_result.png" alt="validation 평가" width="400"/>
 
 ![train 평가](./images/train_result.png)
 ![validation 평가](./images/validation_result.png)
