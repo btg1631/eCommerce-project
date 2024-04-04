@@ -75,6 +75,9 @@
 ![모델 평가](./images/model_result.png)
 
 
+![train 평가](./images/train_result.png)
+![validation 평가](./images/validation_result.png)
+
 ## 5. 분석
 
 
