@@ -89,7 +89,9 @@
 이를 뒷바침하는 내용으로 딥러닝 모델의 실제 서비스 체크에서 상당부분 부정문으로 치우처져 있는것으로 보아 부정문에서 더 많은 어휘수를 활용한다는 것을 확인할 수 있다.
 ```
 
+
+
 ## 기타
 
 
-- <a href="https://docs.google.com/spreadsheets/d/1nxopVWUGgYlj-BUAeGTyQR1V89IP-p7GziXPLiKHoSo/edit#gid=652261404">스케쥴러</a>
+- <a href="https://docs.google.com/spreadsheets/d/1fI5fjH77IYkd6PDWiHoGtfQSxQe-8Yq1ghhO0wa8ibU/edit?usp=sharing">스케쥴러</a>
