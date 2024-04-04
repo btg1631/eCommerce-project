@@ -9,17 +9,24 @@
 또, 한국 자연어 처리의 더불어 고객의 감성을 분석할 수 있다면 커머스뿐만 아니라 많은 방면에서 활용할 수 있을 것이라는 생각이 들었기 때문에 프로젝트를 진행해 보기로 마음먹었다.
 
 ### 팀원 소개
-|이름|||
+|이름|담당||
 |--|--|--|
-|박요한|||
-|장영지|||
-|김유진|||
+|박요한|크롤링, 분석, 머신러닝||
+|장영지|크롤링||
+|김유진|크롤링||
 
 ## 2. 데이터 수집
 
 대상 사이트 : SSG [https://www.ssg.com/]
 
 대상 카테고리 : 식품
+
+---
+[데이터 크롤링 코드](./docs/selenium/yohan/gathering.py)
+
+수집 코드 초안 작성 : 장영지
+
+디버깅 및 수정 / 실행 코드 제작 : 박요한
 
 <table>
     <tr>
@@ -30,7 +37,9 @@
   <tr>
     <td rowspan="5">박요한</td>
     <td>비빔면</td>
-    <td rowspan="5"><a href="./docs/selenium/yohan/gathering.py">gathering.py</a></td>
+    <td rowspan="5"><a href="./docs/selenium/yohan/gathering.py">gathering.py</a><br>
+    <a href="./docs/selenium/yohan/run_gathering.py">run_gathering.py</a>
+    </td>
   </tr>
   <tr>
     <td>참기름</td>
