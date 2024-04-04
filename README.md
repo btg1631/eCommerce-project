@@ -57,6 +57,22 @@
 
 ## 4. 딥러닝
 
+제작 : 박요한
+
+|단계|내용|코드|
+|--|--|--|
+|전처리|데이터 확인 / 학습 데이터 처리|[ipynb](./docs/analysis/yohan/first_process.ipynb)|
+|딥러닝|Tf-idf 벡터라이징|[ipynb](./docs/analysis/yohan/second_process_remake.ipynb)|
+|딥러닝|Counter 벡터라이징|[ipynb](./docs/analysis/yohan/third_process_remake.ipynb)|
+
+|분류|내용|설명|
+|--|--|--|
+|Clf|LSTM||
+|Split|Train : Validation : Test| 8:1:1|
+|Aug|Under_sampling = NearMiss|sampling_strategy=0.7|
+|Model|optimizer='Adam' / loss='CrossEntropyLoss' / Learning_rate = 0.001||
+
+![모델 평가](./images/model_result.png)
 
 
 
